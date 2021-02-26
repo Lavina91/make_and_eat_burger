@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/Lavina91/make_and_eat_burger/issues"
   },
-  "homepage": "https://github.com/Lavina91/make_and_eat_burger#readme"
+  "homepage": "https://github.com/Lavina91/make_and_eat_burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "mysql": "^2.18.1"
+  }
 }
