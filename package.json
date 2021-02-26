@@ -1,0 +1,21 @@
+{
+  "name": "make_and_eat_burger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lavina91/make_and_eat_burger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lavina91/make_and_eat_burger/issues"
+  },
+  "homepage": "https://github.com/Lavina91/make_and_eat_burger#readme"
+}
