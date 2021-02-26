@@ -13,4 +13,5 @@ const orm = {
 
 };
 
+// exporting out the orm object
 module.exports = orm;
