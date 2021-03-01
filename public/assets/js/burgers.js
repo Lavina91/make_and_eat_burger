@@ -46,7 +46,34 @@ if (devouredBurgerBtns) {
 // ----------------------- CREATE --------------------------------------------------------------------
 
 
+const createBurgerBtn = document.getElementById('create-form');
 
+if (createBurgerBtn) {
+    createBurgerBtn.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const newBurger = {
+            burger_name: document.getElementById('burg').value.trim(),
+            devoured: document.getElementById('devoured').checked,
+        };
+
+
+        fetch('/api/burgers', {
+            method: 'POST', 
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+            
+            body: JSON.stringify(newBurger),
+        }).then(() => {
+            document.getElementById('burg').value = '';
+
+            console.log('Created a new burger!');
+            location.reload();
+        })
+    })
+}
 
 
 
