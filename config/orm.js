@@ -42,7 +42,7 @@ const objToSql = (ob) => {
 const orm = {
     // will connect to the saved burgers 
     selectAll(tableInput, cb) {
-        const queryString = `SELECT * FROM ${tableInput};`;
+        const queryString = `SELECT * FROM ${tableInput}`;
         connection.query(queryString, (err, result) => {
             if (err) {
                 throw err;
