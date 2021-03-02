@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+    event.preventDefault();
     if (event) {
         console.info('DOM loaded')
     }
@@ -15,26 +16,26 @@ if (createBurgerBtn) {
 
         const newBurger = {
             burger_name: document.getElementById('burg').value.trim(),
-            devoured: document.getElementById('devoured').checked,
+            devoured: document.getElementById('eaten').checked,
         };
 
         console.log(newBurger)
 
 
-        // fetch('/api/burgers', {
-        //     method: 'POST', 
-        //     headers: {
-        //         Accept: 'application/json',
-        //         'Content-Type': 'application/json',
-        //     },
+        fetch('/api/burgers', {
+            method: 'POST', 
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
             
-        //     body: JSON.stringify(newBurger),
-        // }).then(() => {
-        //     document.getElementById('burg').value = '';
+            body: JSON.stringify(newBurger),
+        }).then(() => {
+            document.getElementById('burg').value = '';
 
-        //     console.log('Created a new burger!');
-        //     location.reload();
-        // })
+            console.log('Created a new burger!');
+            location.reload();
+        })
     })
 }
 
