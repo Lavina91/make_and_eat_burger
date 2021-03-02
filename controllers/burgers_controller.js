@@ -23,7 +23,7 @@ router.get('/', (req, res) => {
 // create burger route
 router.post('/api/burgers', (req, res) => {
     burger.insertOne(['burger_name', 'devoured'], [req.body.burger_name, req.body.devoured], (result) => {
-        ({id: result.insertId});
+        res.json({id: result.insertId});
     })
 });
 
@@ -47,5 +47,5 @@ router.put('/api/burgers/:id', (req, res) => {
     });
 
 
-
+module.exports = router;
 

@@ -1,16 +1,13 @@
-<div class="savedBurger">
+<h2 id="saveBurger">Saved Burgers</h2>
 
-<h2>Saved Burgers</h2>
-
-<ul>
+<ul id="saveBurgerList">
 {{#each burgers}}
 {{#unless devoured}}
-{{> bugers/burger/block eaten=false }}
+{{> burgers/burger-block eaten=true}}
 {{/unless}}
 {{/each}}
 </ul>
 
-</div>
 
 
 <h2 id="addBurger">Add a new burger</h2>
@@ -18,28 +15,27 @@
 
     <div class="form-group">
         <label for="burg">Burger Name:</label>
-        <input type="text" id="burg" name="name">
+        <input type="text" id="burg" name="burger_name">
+    </div>
 
-        <div class="form-group">
-            <label for="devouredBurg">Has the burger been eaten?</label><br>
-            <input type="radio" name="devouredBurg" value="1" id="eaten" checked> Yes it has been eaten!<br>
-            <input type="radio" name="devouredBurg" value="0" id="awake"> Saving it for later!
+    <div class="form-group">
+            <label for="devoured">Has the burger been eaten?</label><br>
+            <input type="radio" name="devoured" value="1" id="eaten"> Yes it has been eaten!<br>
+            <input type="radio" name="devoured" value="0" id="notEaten" checked> Saving it for later!
         </div>
 
         <button type="submit">Add Burger</button>
-    </div>
 </form>
 
-<div class="devouredBurger">
 
-    <h2>Devoured Burgers</h2>
+<h2 id="devBurger">Devoured Burgers</h2>
 
-    <ul>
-        {{#each burgers}}
-        {{#unless devoured}}
-        {{> bugers/burger/block eaten=true}}
-        {{/unless}}
-        {{/each}}
-    </ul>
+<ul id="devBurgerList">
+    {{#each burgers}}
+    {{#if devoured}}
+    {{> burgers/burger-block eaten=false}}
+    {{/if}}
+    {{/each}}
+</ul>
 
-</div>
+

@@ -1,3 +1,6 @@
+### SCHEMA
+
+
 -- drop any database with the same name 
 DROP DATABASE IF EXISTS burgers_db;
 
