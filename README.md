@@ -27,7 +27,9 @@ npm i
 
 ## Screenshots
 
+![Picture of start screen for application](./images/start-screen.png)
 
+![Picture of one of the burgers changing tables](./images/moved-table.png)
 
 ## Questions 
 
